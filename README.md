@@ -2,7 +2,7 @@ To replicate the issue, first clone this repo, then run the following
 
 ```shell
 yarn install
-yarn start
+yarn dev
 ```
 
 and go to `http://localhost:3000/` in your browser.
