@@ -1,3 +1,4 @@
+'use client';
 import '../styles/globals.css';
 import '@rainbow-me/rainbowkit/styles.css';
 import { RainbowKitProvider, getDefaultWallets } from '@rainbow-me/rainbowkit';

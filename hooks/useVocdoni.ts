@@ -1,3 +1,5 @@
+'use client';
+
 import {Election, EnvOptions, PlainCensus, VocdoniSDKClient} from '@vocdoni/sdk';
 import {ethers} from "ethers";
 

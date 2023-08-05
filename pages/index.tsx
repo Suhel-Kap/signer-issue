@@ -1,3 +1,4 @@
+'use client';
 import React, {useEffect} from 'react';
 import {ConnectButton} from '@rainbow-me/rainbowkit';
 import {useAccount, useSigner} from "wagmi";
@@ -5,7 +6,7 @@ import {useRouter} from 'next/router'
 
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
-// import useVocdoni from "../hooks/useVocdoni";
+import useVocdoni from "../hooks/useVocdoni";
 
 const Home = () => {
 
@@ -15,7 +16,7 @@ const Home = () => {
   const { address } = useAccount();
   const { data: signer } = useSigner();
   const router = useRouter();
-  // const {initElection} = useVocdoni()
+  const {initElection} = useVocdoni()
 
   useEffect(() => {
     if (mounted && signer && address){
@@ -40,7 +41,7 @@ const Home = () => {
       <main className={styles.main}>
         <ConnectButton />
         <button onClick={async () => {
-          // const res = await initElection(signer)
+          const res = await initElection(signer)
           console.log("hello")
         }}>
           Vocdoni client
